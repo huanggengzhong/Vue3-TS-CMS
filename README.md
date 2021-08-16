@@ -96,11 +96,17 @@ module.exports = {
 }
 ```
 
-### git Husky 提交检查命令
+### git Husky 提交拦截
 
 安装命令
 
 ```js
 npx husky-init
 npm install
+```
+
+然后在.husky/pre-commit 里增加检查
+
+```js
+npm run lint
 ```
