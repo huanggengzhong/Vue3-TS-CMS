@@ -110,3 +110,22 @@ npm install
 ```js
 npm run lint
 ```
+
+限制普通 commit 提交
+执行安装
+
+```js
+npm install commitizen -D
+```
+
+初始化
+
+```js
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
+```
+
+package.json 中添加命令
+
+```js
+ "commit":"cz"
+```

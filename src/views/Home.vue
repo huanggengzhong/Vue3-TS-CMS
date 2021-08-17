@@ -15,4 +15,6 @@ export default defineComponent({
     HelloWorld
   }
 })
+
+console.log('哈哈哈')
 </script>
