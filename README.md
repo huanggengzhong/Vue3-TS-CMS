@@ -129,3 +129,29 @@ package.json 中添加命令
 ```js
  "commit":"cz"
 ```
+
+#### 代码提交限制(限制必须采用 npm run commit 提交)
+
+如果我们按照 cz 来规范了提交风格，但是依然有同事通过 `git commit` 按照不规范的格式提交应该怎么办呢？
+
+- 我们可以通过 commitlint 来限制提交；
+
+  1.安装 @commitlint/config-conventional 和 @commitlint/cli
+
+```shell
+npm i @commitlint/config-conventional @commitlint/cli -D
+```
+
+2.在根目录创建 commitlint.config.js 文件，配置 commitlint
+
+```js
+module.exports = {
+  extends: ['@commitlint/config-conventional']
+}
+```
+
+3.使用 husky 生成 commit-msg 文件，验证提交信息：
+
+```shell
+npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
+```
