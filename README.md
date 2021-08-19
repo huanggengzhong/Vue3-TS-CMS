@@ -153,5 +153,13 @@ module.exports = {
 3.使用 husky 生成 commit-msg 文件，验证提交信息：
 
 ```shell
-npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
+npx husky add .husky/commit-msg
 ```
+
+然后在 commit-msg 文件最后加上
+
+```js
+npx --no-install commitlint --edit
+```
+
+这样提交只能采用 npm run commit 来提交记录了.
