@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  // publicPath: '/'
+  publicPath: './',
   outputDir: 'pc',
   //配置方式1
   // configureWebpack: {
