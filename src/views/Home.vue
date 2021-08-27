@@ -22,6 +22,4 @@ export default defineComponent({
     // ElButton
   }
 })
-
-console.log('哈哈哈33333asdfasfaasdfsafafsf3')
 </script>
